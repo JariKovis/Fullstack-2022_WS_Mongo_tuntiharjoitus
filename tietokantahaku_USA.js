@@ -31,12 +31,14 @@ client.connect(err => {
     collection
         .find(query)          /* query muuttuja sisältää kyselyn */
         .limit(5)             /* rajoitetaan tulosjoukko 5:een */
-        .toArray(function (err, result) {  // Palautetaan tulokset JS-taulukkona
+        .toArray(function (err, result) {
+            /* Palautetaan tulokset JS-taulukkona... */
+            /* ...ja tulostetaan taulukko konsoliin */
             if (err) throw err;
             for (const element of result) {
                 console.log(element.title)
             }
-            /* Tulostetaan taulukko ruudulle */
+
             client.close();                /* Suljetaan yhteys */
         });
 });

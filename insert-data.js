@@ -2,15 +2,15 @@ const { MongoClient } = require("mongodb");
 
 require("dotenv").config();
 
-//haetaan .env tiedostosta käyttis ja salasana
+/* haetaan .env tiedostosta käyttis ja salasana */
 var user = process.env.DB_USER
 var salis = process.env.DB_PASS
 
-const url = "mongodb+srv://" + user + ":" + salis + "@cluster0.anqd5.mongodb.net/sample_mflix?retryWrites=true&w=majority";
+const url = "mongodb+srv://" + user + ":" + salis + "@cluster0.anqd5.mongodb.net/test?retryWrites=true&w=majority";
 
 const client = new MongoClient(url);
 
-// The database to use
+/* The database to use */
 const dbName = "test";
 
 async function run() {
@@ -19,10 +19,10 @@ async function run() {
         console.log("Connected correctly to server");
         const db = client.db(dbName);
 
-        // Use the collection "people"
+        /*     Use the collection "people" */
         const col = db.collection("people");
 
-        // Construct a document                                                                                                                                                              
+        /*       Construct a document */
         let personDocument = {
             "name": { "first": "Alan", "last": "Turing" },
             "birth": new Date(1912, 5, 23), // June 23, 1912                                                                                                                                 

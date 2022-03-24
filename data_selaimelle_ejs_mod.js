@@ -21,7 +21,7 @@ app.get("/", function (req, res) {
 
 /*     Web-palvelimen luonti Expressin avulla */
 app.listen(3001, function () {
-    console.log("Kuunnellaan porttia.");
+    console.log("Kuunnellaan porttia....3001");
 });
 
 
