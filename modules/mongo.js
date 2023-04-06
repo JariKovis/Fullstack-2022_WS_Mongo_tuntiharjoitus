@@ -17,7 +17,7 @@ exports.getData = function getResult(callback) {
         useUnifiedTopology: true
     });
 
-    /* Määritellään tietokantaan tehtävä kyselu JSON-oliona. Tämä kysely hakee kaikkia elokuvia
+    /* Määritellään tietokantaan tehtävä kysely JSON-oliona. Tämä kysely hakee kaikkia elokuvia
     joiden nimessä esiintyy sana "Star Wars" */
     var query = {
         title: new RegExp("Star Wars")
